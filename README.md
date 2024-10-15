@@ -52,19 +52,19 @@ This mini-project aims to analyze different DNS queries and responses using vari
 
 To perform DNS queries using dig, these are the commands we used to capture different packets.
 
-bash
+```bash
 dig <domain_name> A
 dig <domain_name> AAAA
 dig <domain_name> MX
-
+```
 ### Analyzing DNS Queries with nslookup
 
 To perform DNS queries using nslookup, these are the commands we used to capture different packets.
 
-bash
+```bash
 nslookup <domain_name>
 nslookup -type=AAAA <domain_name>
-
+```
 
 ### Analyzing DNS Caching using ipconfig
 
@@ -72,13 +72,14 @@ To observe DNS caching, we can take two packets one with caching and the other w
 
 To view the local cache
 
-bash
+```bash
 ipconfig /displaydns
-
+```
 To clear the cache
-bash
+```bash
 ipconfig /flushdns
-
+```
 As the dig command doesnt utilize the local cache, we can use ping to compare the response times.
-bash
+```bash
 ping <domain_name>
+```
